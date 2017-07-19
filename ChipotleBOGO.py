@@ -20,6 +20,6 @@ data = '{"zip":"' + ZIPCODE + '","firstName":"' + FIRSTNAME + '","lastName":"' +
 
 r = requests.post('https://savorwavs.com/api/offer/request', headers=headers, data=data)
 if r.status_code == 200:
-	print 'Success, text message sent to {}'.format(PHONENUMBER)
+	print 'Success, text message sent to ' + PHONENUMBER
 else:
-	print 'Failed, text message was not sent to {}'.format(PHONENUMBER)
+	print 'Failed, text message was not sent to ' + PHONENUMBER
